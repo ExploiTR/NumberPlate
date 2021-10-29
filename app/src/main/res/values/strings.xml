@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Number Plate</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_rto_info">RTO Info</string>
+    <string name="analyse">Analyse</string>
+    <string name="search_vehicle_number">Search Vehicle Number</string>
+    <string name="search">Search</string>
+    <string name="wb">WB</string>
+    <string name="_12xx">12XX</string>
+    <string name="xxxx">XXXX</string>
+    <string name="black_dot">black dot</string>
+    <string name="vehicle_registration_number">Vehicle Registration Number</string>
+    <string name="sample_item_text_1">Sample Item Text 1</string>
+    <string name="sample_item_text_2">Sample item text 2</string>
+    <string name="ownership_details">Ownership Details</string>
+    <string name="vehicle_details_appears_here">Vehicle Details Appears Here!</string>
+    <string name="download">Download</string>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eeeeee"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ui.rtoinfo.RTOFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/rto_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="WB 14X 5XXX"
+            android:inputType="textCapCharacters"
+            app:defaultQueryHint="WB 14X 5XXX"
+            app:iconifiedByDefault="false"
+            app:queryHint="WB 14XX 3XXX" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/download_"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_toStartOf="@+id/search_"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            android:drawableStart="@drawable/ic_download"
+            android:text="@string/download"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/search_"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentEnd="true"
+            android:drawableStart="@drawable/ic_search"
+            android:text="@string/search"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <com.cuieney.progress.library.RainbowProgressBar
+        android:id="@+id/rainProgress"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        app:progress_current="0"
+        app:progress_end_color="@color/colorPrimary"
+        app:progress_height="10dp"
+        app:progress_max="100"
+        app:progress_radius="10dp"
+        app:progress_start_color="@color/colorAccent"
+        app:progress_type="line"
+        app:progress_unreached_color="#FFCDD2" />
+
+    <LinearLayout
+        android:id="@+id/details_sh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/ownership_details"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_rto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/un_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="125dp"
+            android:layout_weight="0.3"
+            android:contentDescription="@string/search"
+            android:orientation="vertical"
+            android:src="@drawable/ic_search" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/vehicle_details_appears_here" />
+    </LinearLayout>
+
+</LinearLayout>
+
